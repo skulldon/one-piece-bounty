@@ -1,0 +1,36 @@
+name: 🚀 Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # ou a branch que você deseja usar para o deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código
+      - name: 🧑‍💻 Checkout code
+        uses: actions/checkout@v3
+
+      # Configuração do Node.js
+      - name: 🛠️ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Especifique a versão do Node.js que você está usando
+
+      # Instalação das dependências
+      - name: 📦 Install dependencies
+        run: npm install
+
+      # Construção do projeto
+      - name: 🏗️ Build project
+        run: npm run build
+
+      # Configuração do GitHub Pages
+      - name: 🌐 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist # O diretório onde os arquivos construídos são gerados

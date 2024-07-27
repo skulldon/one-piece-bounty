@@ -7,6 +7,10 @@ import garpImage from './assets/images/garp.jpeg';
 import zoroImge from './assets/images/zoro .jpeg';
 import vegapunkImage from './assets/images/vegapunk3.png';
 import lunarianImage from './assets/images/lunarian4.jpeg'
+import ceasarImage from './assets/images/ceasae 1.jpeg'
+import rayleighImage from './assets/images/rayleigh.png'
+import kaidouImage from './assets/images/katakuri.jpeg'
+import eustassImage from './assets/images/eustass1.jpeg'
 
 export const characters = [
     {
@@ -108,4 +112,48 @@ export const characters = [
             race: -1
         }
     },
+    {
+        name: 'rayleigh',
+        image: rayleighImage,
+        scores: {
+            sensei: 90,
+            haki: 95,
+            fruit: -1,
+            mind: 90,
+            race: -1
+        }
+    },
+    {
+    name: 'ceasar',
+    image: ceasarImage,
+    scores: {
+        sensei: -1,
+        haki: -1,
+        fruit: 95,
+        mind: -1,
+        race: -1
+    }
+},
+{
+    name: 'kaidou',
+    image: kaidouImage,
+    scores: {
+        sensei: -1,
+        haki: 80,
+        fruit: 99,
+        mind: -1,
+        race: -1
+    }
+},
+{
+    name: 'eustass kid',
+    image: eustassImage,
+    scores: {
+        sensei: -1,
+        haki: 85,
+        fruit: 95,
+        mind: -1,
+        race: -1
+    }
+},
 ]
