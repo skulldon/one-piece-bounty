@@ -5,6 +5,11 @@ on:
     branches:
       - main # ou a branch que você deseja usar para o deploy
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
